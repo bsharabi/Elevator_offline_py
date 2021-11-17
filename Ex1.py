@@ -2,7 +2,6 @@ from Building import build
 import json
 import sys
 import csv
-from Calls import calls
 def pars_input():
     listCalls=[]
     submission_file_build = sys.argv[1]
@@ -16,23 +15,22 @@ def pars_input():
             listCalls.append(row)
     return (submission_file_out,data,listCalls)
   
-def algo():
-    
-    
-    
+def writeFile(outName,calls):
+    with open(outName, 'w', newline='') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',' , quoting=csv.QUOTE_MINIMAL) 
+        for x in calls:  
+            (a,b,c,d,e,f)=x.toString()  ;
+            spamwriter.writerow([a]+[b]+[c]+[d]+[e]+[f])
+        
+          
     pass
 def main():
     (outName,data,callList)=pars_input()
-    print(data)
-    b=build(data)
-    c=calls(callList[0])
-  
-    
-    print(c.dest)
-    for x in b._elevators:
-        print(x._minFloor)
+    b=build(data,callList)
+    writeFile(outName,b._calls)
    
- 
+  
+     
 if __name__ == "__main__":
     main()
 

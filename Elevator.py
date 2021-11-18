@@ -9,4 +9,7 @@ class elevator:
         self._openTime=elevatotObj["_openTime"]
         self._startTime=elevatotObj["_startTime"]
         self._stopTime=elevatotObj["_stopTime"]
-        
+        self.endingstamp=0
+        self.diraction=0
+        self.calls= []
+        self.offset= self._openTime+self._closeTime+self._startTime+self._stopTime

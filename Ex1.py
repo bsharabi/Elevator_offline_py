@@ -3,7 +3,8 @@ import json
 import sys
 import csv
 def pars_input():
-    listCalls=[]
+    '''This function is sagi'''
+    callList=[]
     submission_file_build = sys.argv[1]
     submission_file_calls = sys.argv[2]
     submission_file_out = sys.argv[3]
@@ -12,24 +13,28 @@ def pars_input():
     with open(submission_file_calls, newline='') as csvfile:
         spamreader = csv.reader(csvfile, delimiter=',')
         for row in spamreader:
-            listCalls.append(row)
-    return (submission_file_out,data,listCalls)
-  
+            callList.append(row)
+    
+    submission_file_out=submission_file_out.split(".")[0]+'.csv'
+    return (submission_file_out,data,callList)
+
+
 def writeFile(outName,calls):
+    '''This function '''
     with open(outName, 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',' , quoting=csv.QUOTE_MINIMAL) 
         for x in calls:  
-            (a,b,c,d,e,f)=x.toString()  ;
-            spamwriter.writerow([a]+[b]+[c]+[d]+[e]+[f])
+            (name_elev,timeIn,src,dest,flag,allocate)=x.toString()  ;
+            spamwriter.writerow([name_elev]+[timeIn]+[src]+[dest]+[flag]+[allocate])
         
           
     pass
 def main():
+    '''This function '''
     (outName,data,callList)=pars_input()
     b=build(data,callList)
     writeFile(outName,b._calls)
    
-  
      
 if __name__ == "__main__":
     main()

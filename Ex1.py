@@ -3,7 +3,6 @@ import json
 import sys
 import csv
 import algo
-import time
 def pars_input():
     '''This function is'''
     callList=[]

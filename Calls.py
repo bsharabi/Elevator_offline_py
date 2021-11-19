@@ -1,7 +1,6 @@
 class calls:
     id = 0
     # __init__ - is a keyword to the class constructor
-
     def __init__(self, Call):
         self._id = calls.id
         self.name = Call[0]
@@ -21,3 +20,4 @@ class calls:
 
     def allocateTo(self, numberElevator):
         self._allocateTo = numberElevator
+

@@ -5,8 +5,13 @@ def allocateToElevator(calls, elevators):
         for call in calls:
             call.allocateTo(0)
     else:
-        for call in calls:
-            call.allocateTo(random.randrange(0,len(elevators)))
+        numElevator=0
+        minTime=0
+        for index,call in enumerate(calls):
+            for elv in elevators:                
+                pass
+        
+        print(elevators[0].getTimeToArrive(calls[0].src,calls[0].dest,calls[0].timeIn))
           
         pass
 

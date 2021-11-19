@@ -2,8 +2,10 @@ from Building import build
 import json
 import sys
 import csv
+import algo
+import time
 def pars_input():
-    '''This function is sagi'''
+    '''This function is'''
     callList=[]
     submission_file_build = sys.argv[1]
     submission_file_calls = sys.argv[2]
@@ -14,7 +16,6 @@ def pars_input():
         spamreader = csv.reader(csvfile, delimiter=',')
         for row in spamreader:
             callList.append(row)
-    
     submission_file_out=submission_file_out.split(".")[0]+'.csv'
     return (submission_file_out,data,callList)
 
@@ -23,16 +24,17 @@ def writeFile(outName,calls):
     '''This function '''
     with open(outName, 'w', newline='') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',' , quoting=csv.QUOTE_MINIMAL) 
-        for x in calls:  
-            (name_elev,timeIn,src,dest,flag,allocate)=x.toString()  ;
+        for call in calls:  
+            (name_elev,timeIn,src,dest,flag,allocate)=call.toString()  ;
             spamwriter.writerow([name_elev]+[timeIn]+[src]+[dest]+[flag]+[allocate])
+            # print(call)
+            # spamwriter.writerow([call])
         
-          
-    pass
 def main():
     '''This function '''
     (outName,data,callList)=pars_input()
     b=build(data,callList)
+    algo.allocateToElevator(b._calls,b._elevators)
     writeFile(outName,b._calls)
    
      
@@ -40,3 +42,4 @@ if __name__ == "__main__":
     main()
 
 
+    

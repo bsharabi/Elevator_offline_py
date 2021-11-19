@@ -1,8 +1,8 @@
-from Building import build
+from Classes.Building import build
 import json
 import sys
 import csv
-import algo
+import algorithm.algo
 def pars_input():
     '''This function is'''
     callList=[]
@@ -33,7 +33,7 @@ def main():
     '''This function '''
     (outName,data,callList)=pars_input()
     b=build(data,callList)
-    algo.allocateToElevator(b._calls,b._elevators)
+    algorithm.algo.allocateToElevator(b._calls,b._elevators)
     writeFile(outName,b._calls)
    
      

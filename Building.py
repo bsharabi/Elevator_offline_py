@@ -12,3 +12,5 @@ class build:
         for c in callsList:
             self._calls.append(calls(c))
         
+    def __repr__(self):
+        return f"minFloor:{self._minFloor}  ; maxFloor:{self._maxFloor} ; elevators: {self._elevators}"

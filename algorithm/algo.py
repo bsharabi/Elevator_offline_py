@@ -1,4 +1,3 @@
-import random
 def allocateToElevator(calls, elevators):
     'If there is one elevator, we will insert the same elevator for all readings.'
     if len(elevators) == 1:

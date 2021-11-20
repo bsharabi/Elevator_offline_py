@@ -6,6 +6,9 @@ Many of us ride elevators every day. We feel like we understand how they work, h
 
 In this challenge, you are asked to implement the business logic for a simplified elevator model in Python. We'll ignore a lot of what goes into a real world elevator, like physics, maintenance overrides, and optimizations for traffic patterns. All you are asked to do is to decide whether the elevator should go up, go down, or stop.
 
+### What the difference between an online algorithm and an oflline algorithm:
+An online algorithm is one that can process its input piece-by-piece in a serial fashion, i.e., in the order that the input is fed to the algorithm, without having the entire input available from the beginning.
+In contrast, an offline algorithm is given the whole problem data from the beginning and is required to output an answer which solves the problem at hand.
 
 ### How to run the app
 ```bash

@@ -40,12 +40,12 @@ after you'll run elevator online sch with simulator an output log file wile genr
 | B4                | ---    | ---    | ---    | ---   |
 | B5                | ---    | ---    | ---    | ---   |
 
-| Left-aligned | Center-aligned | Right-aligned | Left-aligned | Center-aligned |
-|   :---:      |     :---:      |     :---:     |     :---:    |     :---:      |
-| git status   | git status     | git status    | git status   | git status     |
-| git diff     | git diff       | git diff      | git diff     | git diff       |
-| git diff     | git diff       | git diff      | git diff     | git diff       |
-| git diff     | git diff       | git diff      | git diff     | git diff       |
+| Call case Building |     Call_a     |     Call_b    |    Call_c    |    Call_d    |
+|        :---:       |     :---:      |     :---:     |     :---:    |     :---:    |
+| git status         | git status     | git status    | git status   | git status   |
+| git diff           | git diff       | git diff      | git diff     | git diff     |
+| git diff           | git diff       | git diff      | git diff     | git diff     |
+| git diff           | git diff       | git diff      | git diff     | git diff     |
 
 
 

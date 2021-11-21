@@ -40,6 +40,11 @@ after you'll run elevator online sch with simulator an output log file wile genr
 | B4 |                  | --- | --- | --- | --- |
 | B5 |                 | --- | --- | --- | --- |
 
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
 
 
 <!-- **Note**: Running this requires [Git](https://git-scm.com) and [npm](https://www.npmjs.com/).

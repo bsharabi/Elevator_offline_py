@@ -32,5 +32,15 @@ $ Run "java -jar Ex1_checker_V1.2_obf.jar <Id>,<Id> <JSON Building file> <output
 ### out log
 after you'll run elevator online sch with simulator an output log file wile genrate at the path folder. the file show's the results of the algoritem by the parameter of time, avrage call time, unanswerd calls and avarage action time. the result are in format of:
 
+### Result
+|Call case /Building| Call_a | Call_b | Call_c | Call_d|
+| B1                  | 112.92 | --- | --- | --- |
+| B2|                  | --- | --- | --- | --- |
+| B3 |                  | --- | --- | --- | --- |
+| B4 |                  | --- | --- | --- | --- |
+| B5 |                 | --- | --- | --- | --- |
+
+
+
 <!-- **Note**: Running this requires [Git](https://git-scm.com) and [npm](https://www.npmjs.com/).
 https://www.geeksforgeeks.org/smart-elevator-pro-geek-cup/ -->

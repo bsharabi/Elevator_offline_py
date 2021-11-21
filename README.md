@@ -34,18 +34,18 @@ after you'll run elevator online sch with simulator an output log file wile genr
 
 ### Result
 |Call case Building | Call_a | Call_b | Call_c | Call_d|
-| B1                | 112.92 | ---    | ---    | ---   |
-| B2                | ---    | ---    | ---    | ---   |
-| B3                | ---    | ---    | ---    | ---   |
-| B4                | ---    | ---    | ---    | ---   |
-| B5                | ---    | ---    | ---    | ---   |
+| B1                | 112.92 | \---    | \---    | \---   |
+| B2                | \---    | \---    | \---    | \---   |
+| B3                | \---    | \---    | \---    | \---   |
+| B4                | \---    | \---    | \---    | \---   |
+| B5                | \---    | \---    | \---    | \---   |
 
 | Call case Building |     Call_a     |     Call_b    |    Call_c    |    Call_d    |
 |        :---:       |     :---:      |     :---:     |     :---:    |     :---:    |
-| git status         | git status     | git status    | git status   | git status   |
-| git diff           | git diff       | git diff      | git diff     | git diff     |
-| git diff           | git diff       | git diff      | git diff     | git diff     |
-| git diff           | git diff       | git diff      | git diff     | git diff     |
+|         B1         |      112       | git status    | git status   | git status   |
+|         B2         | git diff       | git diff      | git diff     | git diff     |
+|         B3         | git diff       | git diff      | git diff     | git diff     |
+|         B4         | git diff       | git diff      | git diff     | git diff     |
 
 
 

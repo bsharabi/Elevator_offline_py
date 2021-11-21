@@ -1,29 +1,20 @@
+from sys import float_info as Float
 def allocateToElevator(calls, elevators):
-    'If there is one elevator, we will insert the same elevator for all readings.'
+    'If there is one elevator, we will insert the same elevator for all calls.'
     if len(elevators) == 1:
         for call in calls:
             call.allocateTo(0)
     else:
-        numElevator=0
-        minTime=0
-        for index,call in enumerate(calls):
-            for elv in elevators:                
-                pass
-        
-        print(elevators[0].getTimeToArrive(calls[0].src,calls[0].dest,calls[0].timeIn))
-          
-        pass
-
-
-def allocate(packet, elevators):
-    pass
-
-
-# Ending stamp calcuating the futere ending stamp includ the new call
-def EndingStamp(elevator, call):
-    pass
-
-
-# time to get calcuate the time it take the elvator to go from a given source to the given destination without including the current floor of the elevator 
-def TimeToGet(src, dest, elevator): 
-    pass
+        timeComplete = 0
+        bestMatchElevator = -1
+        for call in calls:
+            minTime = Float.max
+            for elevator in elevators:
+                tTc=elevator.timeToComplete(call)
+                if tTc < minTime:
+                    bestMatchElevator = elevator._id
+                    minTime = tTc
+                    timeComplete = minTime+1 +elevator.arrivalTime(call.src,call.dest)
+            call.allocateTo(bestMatchElevator)
+            call.endTime = timeComplete
+            elevators[bestMatchElevator]._calls.append(call)

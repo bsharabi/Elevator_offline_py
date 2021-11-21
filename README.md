@@ -2,6 +2,7 @@
 elevator offline is an offline algorithm for modern elevators demonstrated using a simulator. It takes the problem of data delivery in advance in today's elevators and solves it with a new call distribution method based on a new call system and a specific offset operation time for each elevator, which gives us better delivery and transport time.
 
 ## Literature research
+***
 * "Heuristics in dynamic scheduling: a practical framework with a case study in elevator dispatching"
 * "On-line Algorithms versus Off-line Algorithms for the Elevator Scheduling Problem" - by: Sasikanth Avancha, Dipanjan Chakraborty, Vasundhara Puttagunta
 * "on line dial a ride problems under a restricted information model"

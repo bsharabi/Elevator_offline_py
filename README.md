@@ -34,11 +34,11 @@ after you'll run elevator online sch with simulator an output log file wile genr
 
 ### Result
 |Call case /Building| Call_a | Call_b | Call_c | Call_d|
-| B1                  | 112.92 | --- | --- | --- |
-| B2|                  | --- | --- | --- | --- |
-| B3 |                  | --- | --- | --- | --- |
-| B4 |                  | --- | --- | --- | --- |
-| B5 |                 | --- | --- | --- | --- |
+| B1                | 112.92 | ---    | ---    | ---   |
+| B2                | ---    | ---    | ---    | ---   |
+| B3                | ---    | ---    | ---    | ---   |
+| B4                | ---    | ---    | ---    | ---   |
+| B5                | ---    | ---    | ---    | ---   |
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |

@@ -33,19 +33,14 @@ $ Run "java -jar Ex1_checker_V1.2_obf.jar <Id>,<Id> <JSON Building file> <output
 after you'll run elevator online sch with simulator an output log file wile genrate at the path folder. the file show's the results of the algoritem by the parameter of time, avrage call time, unanswerd calls and avarage action time. the result are in format of:
 
 ### Result
-|Call case Building | Call_a | Call_b | Call_c | Call_d|
-| B1                | 112.92 | \---    | \---    | \---   |
-| B2                | \---    | \---    | \---    | \---   |
-| B3                | \---    | \---    | \---    | \---   |
-| B4                | \---    | \---    | \---    | \---   |
-| B5                | \---    | \---    | \---    | \---   |
+| Call case \ Building |     Call_a     |     Call_b    |    Call_c    |    Call_d    |
+|        :---:         |     :---:      |     :---:     |     :---:    |     :---:    |
+|         B1           |    112.92      |       None    |     None     |     None     |
+|         B2           |     49.23      |       None    |     None     |     None     |
+|         B3           |     27.97      |     536.27    |    556.61    |    553.22    |
+|         B4           |     16.95      |     202.53    |    207.03    |    197.48    |
+|         B5           |     11.52      |      35.33    |     33.71    |     35.52    |
 
-| Call case Building |     Call_a     |     Call_b    |    Call_c    |    Call_d    |
-|        :---:       |     :---:      |     :---:     |     :---:    |     :---:    |
-|         B1         |      112       | git status    | git status   | git status   |
-|         B2         | git diff       | git diff      | git diff     | git diff     |
-|         B3         | git diff       | git diff      | git diff     | git diff     |
-|         B4         | git diff       | git diff      | git diff     | git diff     |
 
 
 

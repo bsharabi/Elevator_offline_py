@@ -11,33 +11,28 @@ class elevator:
         self._openTime = elevatotObj["_openTime"]
         self._startTime = elevatotObj["_startTime"]
         self._stopTime = elevatotObj["_stopTime"]
-        self._severalFloors = abs(self._maxFloor-self._minFloor)
-        self._direction = 0
-        self._timeComplete = 0
         self._calls = []
         self.offset = int(self._startTime)+int(self._stopTime) + int(self._openTime)+int(self._closeTime)
-        self._position = self.setGraphTime(0)
 
-    def setGraphTime(self,timeIn):
-        return [[self.arrivalTime(i, j,timeIn) for j in range(self._severalFloors)] for i in range(self._severalFloors)]
-
-    def arrivalTime(self, src, dest,timeIn):
+    def arrivalTime(self, src, dest):
         if src == dest:
             return 0
-        countCall=len(self._calls) if len(self._calls)>0 else 1
-        return abs(src-dest)/float(self._speed)+(self.offset)*countCall+timeIn
+        return abs(src-dest)/float(self._speed)+(self.offset)
 
-    def getTimeToArrive(self, src, dest,timeIn):
-        self._position=self.setGraphTime(timeIn)
-        if src < 0:
-            src = src % abs(self._minFloor)
+    def timeToComplete(self,call):
+        if not self._calls:
+            if call.src == 0:
+                return call.timeIn
+            return call.timeIn + self.offset + (abs(0 - call.src)) / self._speed
         else:
-            src += abs(self._minFloor)
-        if(dest < 0):
-            dest = dest % abs(self._minFloor)
-        else:
-            dest += abs(self._minFloor)   
-        return self._position[src][dest]
+            if self._calls[-1].endTime > call.timeIn:
+                return self._calls[-1].endTime + self.offset + (abs(self._calls[-1].dest - call.src)) / self._speed
+            else:
+                if self._calls[-1].dest == call.src:
+                    return call.timeIn
+                return call.timeIn + self.offset + (abs(self._calls[-1].dest - call.src)) / self._speed
 
     def __repr__(self):
         return f"_id:{self._id} _speed:{self._speed} _minFloor:{self._minFloor} _maxFloor:{self._maxFloor} _closeTime:{self._closeTime} _openTime:{self._openTime} _startTime:{self._startTime} _stopTime:{self._stopTime}"
+
+ 

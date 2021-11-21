@@ -1,4 +1,4 @@
-from Classes.Building import build
+from Departments.Building import build
 import json
 import sys
 import csv

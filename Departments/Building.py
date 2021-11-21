@@ -1,5 +1,5 @@
-from Classes.Calls import calls
-from Classes.Elevator import elevator
+from Departments.Calls import calls
+from Departments.Elevator import elevator
 class build:
     # __init__ - is a keyword to the class constructor
     def __init__(self, obj,callsList):
